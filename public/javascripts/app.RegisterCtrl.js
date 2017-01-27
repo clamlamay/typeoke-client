@@ -7,7 +7,7 @@ angular.module('karaokeApp')
 
   $scope.addPointsAccount = function() {
     $http({
-        url: 'http://localhost:9292/points/',
+        url: 'http://typeoke-server.herokuapp.com/points/',
         method: 'POST',
         params: { score: 0, username: $rootScope.user }
       }).success(function(results) {
@@ -22,7 +22,7 @@ angular.module('karaokeApp')
 
   $scope.addUser = function(username, password) {
     $http({
-      url: 'http://localhost:9292/users/register',
+      url: 'http://typeoke-server.herokuapp.com/users/register',
       method: 'POST',
       params: { username: username, password: password}
     }).success(function(results) {

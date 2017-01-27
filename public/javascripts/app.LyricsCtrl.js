@@ -13,7 +13,7 @@ angular.module('karaokeApp')
 
     $scope.fetch = function() {
       console.log(currentId)
-      $http.get('http://localhost:9292/songs/' + currentId).success(function (results) {
+      $http.get('http://typeoke-server.herokuapp.com/songs/' + currentId).success(function (results) {
         // Remove line-breaks from lyrics, split words by spaces
         var lyrics = (results.lyrics).replace(/\r?\n|\r/g, ' ');
         var lyricsArray = lyrics.split(" ");
@@ -49,7 +49,7 @@ angular.module('karaokeApp')
 
     $scope.updateScore = function() {
       $http({
-          url: 'http://localhost:9292/points/' + $rootScope.id,
+          url: 'http://typeoke-server.herokuapp.com/points/' + $rootScope.id,
           method: 'PATCH',
           params: { score: $rootScope.points }
         }).success(function(results) {

@@ -6,7 +6,7 @@ angular.module('karaokeApp')
   $rootScope.logout = false;
 
   $scope.retrievePoints = function(){
-    $http.get('http://localhost:9292/points/' + $rootScope.id)
+    $http.get('http://typeoke-server.herokuapp.com/points/' + $rootScope.id)
         .success(function (results) {
         console.log("User's score: " + results.score);
         $rootScope.points = results.score;
@@ -18,7 +18,7 @@ angular.module('karaokeApp')
 
   $scope.loginUser = function(username, password) {
     $http({
-      url: 'http://localhost:9292/users/login',
+      url: 'http://typeoke-server.herokuapp.com/users/login',
       method: 'POST',
       params: { username: username, password: password }
     }).success(function(results) {

@@ -4,7 +4,7 @@ angular.module('karaokeApp')
   $scope.scores = [];
 
   $scope.populateList = function() {
-    $http.get('http://localhost:9292/points').success(function (data) {
+    $http.get('http://typeoke-server.herokuapp.com/points').success(function (data) {
       $scope.scores = data;
       var highToLow = $scope.scores;
       highToLow.sort(function(a, b){
