@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html ng-app="karaokeApp" ng-cloak=''>
+  <head>
+    <meta charset="utf-8">
+    <title>Typeyoke</title>
+    
+      <!-- Mobile Specific Metas
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0/angular.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0/angular-route.js"></script> -->
+    <script src="/javascripts/angular.js"></script>
+    <script src="/javascripts/angular-route.js"></script>
+    <script src="/javascripts/app.js"></script>
+    <script src="/javascripts/app.UserCtrl.js"></script>
+    <script src="/javascripts/app.AddSongCtrl.js"></script>
+    <script src="/javascripts/app.SongsCtrl.js"></script>
+    <script src="/javascripts/app.LyricsCtrl.js"></script>
+    <script src="/javascripts/app.ScoreCtrl.js"></script>
+    <script src="/javascripts/app.LoginCtrl.js"></script>
+    <script src="/javascripts/app.RegisterCtrl.js"></script>
+
+      <!-- CSS
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="stylesheet" href="/stylesheets/normalize.css">
+    <link rel="stylesheet" href="/stylesheets/skeleton.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+
+     <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+
+  </head>
+  
+  <body>
+
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+    <!-- Header
+  ================================================== -->
+  <header class="animated fadeInDown">
+      
+      <div class="container">
+        <div class="three columns">
+          <div class="logo">
+            <a href="/"><img src="images/logo.png" alt="Karlyoke" /></a>
+          </div>
+        </div>
+
+        <div ng-include="'./ngViews/navBar.html'">
+        <!-- <nav>
+          <ul>
+            <li><a href="/">Log in</a></li>
+            <li><a class="btn" href="/register">Sign Up Now</a></li>
+          </ul>
+        </nav> -->
+        </div>
+      </div>
+
+      <div class="container">
+          <div ng-view></div>
+      </div>
+
+  </header>
+
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  </body>
+</html>

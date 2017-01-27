@@ -1,0 +1,39 @@
+<section>
+  <h2 style="color:red">{{message}}</h2>
+  <h2>Your Music | Current Score: {{points}}</h2>
+  <div class="tbl-header">
+    <table cellpadding="0" cellspacing="0" border="0">
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Artist</th>
+          <th>Lyrics</th>
+          <th>&nbsp;</th>
+        </tr>
+      </thead>
+    </table>
+  </div>
+  <div class="tbl-content">
+    <table cellpadding="0" cellspacing="0" border="0">
+      <tbody>
+        <tr ng-repeat="song in songs">
+          <td>{{song.title}}</td>
+          <td>{{song.artist}}</td>
+          <td>{{song.lyrics}}</td>
+          <td><button data-id="{{song.id}}"
+        		ng-click="removeSong(song)">Remove Song</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+</br>
+<button ng-click="changeRoute()">Add Song</button>&nbsp;<button ng-click="changeRouteSongs()">View the Playlist</button>&nbsp;<button ng-click="changeRouteScores()">Leaderboard</button>
+
+<script>
+  $(window).on("load resize", function() {
+  var scrollWidth = $('.tbl-content').width() - $('.tbl-content table').width();
+  $('.tbl-header').css({'padding-right':scrollWidth});
+  }).resize();
+</script>

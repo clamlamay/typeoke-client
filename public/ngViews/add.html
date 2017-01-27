@@ -1,0 +1,21 @@
+  <div class="container">
+      <div class="twelve columns headertext">
+        <form ng-submit="addSong(title, artist, lyrics)">
+        <h1>Add a New Song</h1>
+        <h1>{{message}}</h1>
+          <div class="row">
+            <div class="six columns">
+              <input class="u-full-width" type="text" ng-model="title" placeholder="Title">
+            </div>
+            <div class="six columns">
+              <input class="u-full-width" type="text" ng-model="artist" placeholder="Artist">
+            </div>
+          </div>
+          <textarea class="u-full-width" type="text" rows="5" ng-model="lyrics" placeholder="Chorus goes here..."></textarea>
+          <input type="submit" value="Submit">
+        </form>
+        <button ng-click="changeRouteSongs()">View the Playlist</button>&nbsp;
+        <button ng-click="changeRouteAccount()">Your Music</button>&nbsp;
+        <button ng-click="changeRouteScores()">Leaderboard</button>
+      </div>
+  </div>

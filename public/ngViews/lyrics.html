@@ -1,0 +1,23 @@
+<div class="container" class="u-full-width">
+	<div class="twelve columns headertext animated zoomIn">
+	<br>
+	<div ng-hide="yay">
+		<img src="images/star.png" class="animated infinite rotateIn"/><img src="images/star.png" class="animated infinite rotateIn"/><img src="images/star.png" class="animated infinite rotateIn"/><img src="images/star.png" class="animated infinite rotateIn"/><h1>You go, Glen Coco!<h1><img src="images/star.png" class="animated infinite rotateIn"/><img src="images/star.png" class="animated infinite rotateIn"/><img src="images/star.png" class="animated infinite rotateIn"/><img src="images/star.png" class="animated infinite rotateIn"/><br><button ng-click="changeRouteSongs()">Pick another song</button>
+	</div>
+	<div ng-hide="nay">
+		<img src="images/boo.png" class="animated infinite wobble"/><img src="images/boo.png" class="animated infinite wobble"/><img src="images/boo.png" class="animated infinite wobble"/><img src="images/boo.png" class="animated infinite wobble"/><h1>Play Again</h1><img src="images/boo.png" class="animated infinite wobble"/><img src="images/boo.png" class="animated infinite wobble"/><img src="images/boo.png" class="animated infinite wobble"/><img src="images/boo.png" class="animated infinite wobble"/><br><button ng-click="changeRouteSongs()">View the Playlist</button>
+		
+	</div>
+	<section>
+	    <article ng-hide="game">
+	    	<h1>Guess the missing word</h1>
+		    <form ng-submit="guessLyric(guess)">
+			    <p class="line-1 anim-typewriter">"{{first}} <input type="text" ng-model="guess" placeholder=""> {{second}}"</p>
+			    <input type="submit" value="Guess!">
+			</form>
+	    </article>
+	</section>
+	</div>
+</div>
+
+
