@@ -12,7 +12,7 @@ angular.module('karaokeApp')
   $scope.songs = [];
 
   $scope.fetch = function() {
-    $http.get('http://localhost:9292/songs').success(function (results) {
+    $http.get('http://typeoke-server.herokuapp.com/songs').success(function (results) {
       $scope.songs = results;
     }).error(function(err) {
       console.log('Fetch failed; it didn\'t happen');
@@ -24,7 +24,7 @@ angular.module('karaokeApp')
 
   $scope.addSong = function(title, artist, lyrics, account_id) {
     $http({
-      url: 'http://localhost:9292/songs/',
+      url: 'http://ltypeoke-server.herokuapp.com/songs/',
       method: 'POST',
       params: { title: title, artist: artist, lyrics: lyrics, account_id: $rootScope.id, api_key: $rootScope.apiKey}
     }).success(function(results) {
