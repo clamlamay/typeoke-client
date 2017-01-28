@@ -7,7 +7,7 @@ angular.module('karaokeApp')
   $scope.username = $rootScope.user;
 
   $scope.fetch = function() {
-    $http.get('http://typeoke-server.herokuapp.com/songs').success(function (results) {
+    $http.get('https://typeoke-server.herokuapp.com/songs').success(function (results) {
       console.log("This is the current user's id:");
       console.log($rootScope.id)
       for (var i = 0; i < results.length; i++) {
@@ -20,7 +20,7 @@ angular.module('karaokeApp')
       console.log(err);
     });
 
-    $http.get('http://typeoke-server.herokuapp.com/points/' + $rootScope.id).success(function (results) {
+    $http.get('https://typeoke-server.herokuapp.com/points/' + $rootScope.id).success(function (results) {
       console.log("User's score: " + results.score);
       $scope.points = results.score;
     }).error(function(err) {
@@ -57,7 +57,7 @@ angular.module('karaokeApp')
     console.log(song.id);
     var Sure = confirm('Do you want to delete that song?');
     if (Sure) {
-      $http.delete('http://typeoke-server.herokuapp.com/songs/' + song.id).success(function(result) {
+      $http.delete('https://typeoke-server.herokuapp.com/songs/' + song.id).success(function(result) {
         $scope.songs = [];
         $scope.fetch(); // auto-update my list
       }).error(function(err) {

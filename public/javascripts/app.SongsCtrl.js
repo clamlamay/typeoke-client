@@ -31,7 +31,7 @@ angular.module('karaokeApp')
   };
 
   $scope.fetch = function() {
-    $http.get('http://typeoke-server.herokuapp.com/songs').success(function (results) {
+    $http.get('https://typeoke-server.herokuapp.com/songs').success(function (results) {
       $scope.songs = results;
     }).error(function(err) {
       console.log('Fetch failed; it didn\'t happen');
