@@ -13,7 +13,7 @@ angular.module('karaokeApp')
 
     $scope.fetch = function() {
       console.log(currentId)
-      $http.get('https://138.197.35.144/songs/' + currentId).success(function (results) {
+      $http.get('http://138.197.35.144/songs/' + currentId).success(function (results) {
         // Remove line-breaks from lyrics, split words by spaces
         var lyrics = (results.lyrics).replace(/\r?\n|\r/g, ' ');
         var lyricsArray = lyrics.split(" ");
